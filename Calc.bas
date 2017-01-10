@@ -1,8 +1,5 @@
 Attribute VB_Name = "Calc"
 Private Const STR_REGEXP As String = "VBScript.RegExp"
-'Private Declare Function SafeArrayAllocDescriptor Lib "oleaut32" _
-'   (ByVal cDims As Long, _
-'    ByRef ppsaOut() As Any) As Long
 
 
 Sub tttt()
@@ -369,22 +366,7 @@ Public Sub IpAddressRange(ByVal ipaddr As String, ByVal subnetMask As String, By
     
 End Sub
 
-Public Sub calcTest()
-    MsgBox FromDecToBit("255")
-'    Dim teststr() As String
-'    SafeArrayAllocDescriptor 1, teststr()
-'    NobbyString.AppendArray teststr(), "5"
-'    NobbyString.AppendArray teststr(), "1"
-'    NobbyString.AppendArray teststr(), "3"
-'    NobbyString.AppendArray teststr(), "2"
-'    NobbyString.AppendArray teststr(), "6"
-'    NobbyString.AppendArray teststr(), "7"
-'    NobbyString.AppendArray teststr(), "4"
-'
-'    Dim sortres() As String
-'    SafeArrayAllocDescriptor 1, sortres()
-'    BubleSortAtString teststr(), sortres()
-End Sub
+
 
 
 '@brief     第一引数の文字列配列（数字の配列）をソートする。
