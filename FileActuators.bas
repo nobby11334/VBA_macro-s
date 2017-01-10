@@ -1,8 +1,5 @@
 Attribute VB_Name = "FileActuators"
 Private Const STR_ERR_MSG_TARGET_FILE As String = "参照ファイル："
-'Private Declare Function SafeArrayAllocDescriptor Lib "oleaut32" _
-'   (ByVal cDims As Long, _
-'    ByRef ppsaOut() As Any) As Long
 
 '@brief     ファイル選択ダイアログを開き、選択したファイルのパスを返す
 '@author    Hiroki Nobumoto
@@ -73,8 +70,6 @@ Public Function MargeToFile(ByVal fileA As String, ByVal fileB As String, ByVal 
     Dim fileAtxt() As String
     Dim fileBtxt() As String
     Dim fileCtxt() As String
-'    SafeArrayAllocDescriptor 1, fileAtxt()
-'    SafeArrayAllocDescriptor 1, fileBtxt()
     ReDim fileAtxt(0)
     ReDim fileBtxt(0)
     

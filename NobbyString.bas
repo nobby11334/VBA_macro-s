@@ -1,8 +1,5 @@
 Attribute VB_Name = "NobbyString"
 Private Const STR_REGEXP_CALL As String = "VBScript.RegExp"
-'Private Declare Function SafeArrayAllocDescriptor Lib "oleaut32" _
-'   (ByVal cDims As Long, _
-'    ByRef ppsaOut() As Any) As Long
     
 Public arrayappendflg As Boolean
 
@@ -26,7 +23,6 @@ Public Sub AppendArray(ByRef strTarget() As String, ByVal inputdata As String)
     Dim res() As String
 '    If UBound(strTarget) < 0 Then
     If UBound(strTarget) = 0 And strTarget(0) = "" Then
-'        SafeArrayAllocDescriptor 1, res()
         ReDim res(0)
         res(0) = ""
         ReDim strTarget(0)
@@ -62,7 +58,6 @@ Public Sub MargeStr(ByRef strA() As String, ByRef strB() As String, ByRef strAB(
         Exit Sub
     End If
     
-'    SafeArrayAllocDescriptor 1, strAB()
     ReDim strAB(0)
     strAB(0) = ""
     Dim strAlength As Long
@@ -188,7 +183,6 @@ End Function
 
 Public Sub regTest()
     Dim resvals() As String
-'    SafeArrayAllocDescriptor 1, resvals()
     ReDim resvals(0)
     resvals(0) = ""
     Dim resval As String
@@ -228,7 +222,6 @@ End Function
 '@param     正規表現にマッチした文字列。複数の場合も格納可。
 '@return    true : 検索にヒット　false :　検索にヒットしない。
 Function GetRegExp(ByVal strTarget As String, ByVal strPattern As String, ByRef res() As String) As Boolean
-'    SafeArrayAllocDescriptor 1, res()
     ReDim res(0)
     res(0) = ""
     Set re = CreateObject(STR_REGEXP_CALL)
